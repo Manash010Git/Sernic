@@ -25,13 +25,42 @@ namespace Sernic.Masters
         }
         private void LoadTheme()
         {
-            DataTable DT = new DataTable();
-            DT = Mas.GetProduct();
+            DataTable DtProduct = new DataTable();
+            DtProduct = Mas.GetProduct();
 
-            foreach (DataRow item in DT.Rows)
+            foreach (DataRow item in DtProduct.Rows)
             {
                 CmbProduct.Properties.Items.Add(item["ProdName"]);
             }
+
+            DataTable DtBrand = new DataTable();
+            DtBrand = Mas.GetBrand();
+
+            foreach (DataRow item in DtBrand.Rows)
+            {
+                CmbBrand.Properties.Items.Add(item["BrandName"]);
+            }
+
+            DataTable DtSize = new DataTable();
+            DtSize = Mas.GetSize();
+
+            foreach (DataRow item in DtSize.Rows)
+            {
+                CmbSize.Properties.Items.Add(item["SizeName"]);
+            }
+
+            DataTable DtCatgory = new DataTable();
+            DtCatgory = Mas.GetCatgory();
+
+            foreach (DataRow item in DtCatgory.Rows)
+            {
+                CmbCategory.Properties.Items.Add(item["CatName"]);
+            }
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
