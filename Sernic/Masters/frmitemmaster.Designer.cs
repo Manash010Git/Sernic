@@ -412,6 +412,7 @@ namespace Sernic.Masters
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(622, 556);
             this.dataGridView1.TabIndex = 0;
@@ -419,42 +420,58 @@ namespace Sernic.Masters
             // SRNO
             // 
             this.SRNO.HeaderText = "Srno";
+            this.SRNO.MinimumWidth = 8;
             this.SRNO.Name = "SRNO";
+            this.SRNO.Width = 150;
             // 
             // PRODUCT
             // 
             this.PRODUCT.HeaderText = "Product";
+            this.PRODUCT.MinimumWidth = 8;
             this.PRODUCT.Name = "PRODUCT";
+            this.PRODUCT.Width = 150;
             // 
             // CATEGORY
             // 
             this.CATEGORY.HeaderText = "Category";
+            this.CATEGORY.MinimumWidth = 8;
             this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.Width = 150;
             // 
             // SIZE
             // 
             this.SIZE.HeaderText = "Size";
+            this.SIZE.MinimumWidth = 8;
             this.SIZE.Name = "SIZE";
+            this.SIZE.Width = 150;
             // 
             // NAME
             // 
             this.NAME.HeaderText = "Name";
+            this.NAME.MinimumWidth = 8;
             this.NAME.Name = "NAME";
+            this.NAME.Width = 150;
             // 
             // COMMONNAME
             // 
             this.COMMONNAME.HeaderText = "Common Name";
+            this.COMMONNAME.MinimumWidth = 8;
             this.COMMONNAME.Name = "COMMONNAME";
+            this.COMMONNAME.Width = 150;
             // 
             // UNIT
             // 
             this.UNIT.HeaderText = "Unit";
+            this.UNIT.MinimumWidth = 8;
             this.UNIT.Name = "UNIT";
+            this.UNIT.Width = 150;
             // 
             // WEIGHT
             // 
             this.WEIGHT.HeaderText = "Weight";
+            this.WEIGHT.MinimumWidth = 8;
             this.WEIGHT.Name = "WEIGHT";
+            this.WEIGHT.Width = 150;
             // 
             // frmitemmaster
             // 
