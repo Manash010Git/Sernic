@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sernic
+namespace Sernic.Masters
 {
-    public partial class Form1 : Form
+    public partial class frmitemmaster : Form
     {
-        public Form1()
+        public frmitemmaster()
         {
             InitializeComponent();
         }
