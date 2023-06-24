@@ -69,6 +69,8 @@ namespace Sernic.Masters
             this.COMMONNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WEIGHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
@@ -80,10 +82,14 @@ namespace Sernic.Masters
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.radioGroup2);
+            this.panel1.Controls.Add(this.radioGroup1);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
@@ -157,6 +163,9 @@ namespace Sernic.Masters
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "FAST MOOVING",
+            "AVILABLE"});
             this.comboBoxEdit1.Size = new System.Drawing.Size(323, 26);
             this.comboBoxEdit1.TabIndex = 14;
             // 
@@ -166,6 +175,9 @@ namespace Sernic.Masters
             this.CmbUnit.Name = "CmbUnit";
             this.CmbUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbUnit.Properties.Items.AddRange(new object[] {
+            "BOX",
+            "PCS"});
             this.CmbUnit.Size = new System.Drawing.Size(323, 26);
             this.CmbUnit.TabIndex = 14;
             // 
@@ -473,6 +485,26 @@ namespace Sernic.Masters
             this.WEIGHT.Name = "WEIGHT";
             this.WEIGHT.Width = 150;
             // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(243, 509);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
+            this.radioGroup1.Size = new System.Drawing.Size(326, 33);
+            this.radioGroup1.TabIndex = 17;
+            // 
+            // radioGroup2
+            // 
+            this.radioGroup2.Location = new System.Drawing.Point(243, 557);
+            this.radioGroup2.Name = "radioGroup2";
+            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
+            this.radioGroup2.Size = new System.Drawing.Size(323, 33);
+            this.radioGroup2.TabIndex = 18;
+            // 
             // frmitemmaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -497,6 +529,8 @@ namespace Sernic.Masters
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -543,5 +577,7 @@ namespace Sernic.Masters
         private DevExpress.XtraEditors.ComboBoxEdit CmbCategory;
         private System.Windows.Forms.TextBox textBox4;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.RadioGroup radioGroup2;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }

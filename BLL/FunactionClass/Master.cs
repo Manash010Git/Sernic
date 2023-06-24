@@ -19,5 +19,29 @@ namespace BLL.FunactionClass
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
+        public DataTable GetSize()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select SizeName from SizeName";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public DataTable GetCatgory()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select CatName from CatName";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public DataTable GetBrand()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select BrandName from BrandName";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
     }
 }
