@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sernic
 {
-    public partial class Form1 : Form
+    public partial class frmComman : Form
     {
-        public Form1()
+        public frmComman()
         {
             InitializeComponent();
         }
