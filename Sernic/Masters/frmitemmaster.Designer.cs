@@ -321,7 +321,7 @@ namespace Sernic.Masters
             this.label2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 33);
+            this.label2.Size = new System.Drawing.Size(101, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "Band";
             // 
