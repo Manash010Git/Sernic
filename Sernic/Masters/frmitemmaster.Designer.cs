@@ -30,6 +30,8 @@ namespace Sernic.Masters
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -69,9 +71,9 @@ namespace Sernic.Masters
             this.COMMONNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WEIGHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbUnit.Properties)).BeginInit();
@@ -82,8 +84,6 @@ namespace Sernic.Masters
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +119,26 @@ namespace Sernic.Masters
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(572, 692);
             this.panel1.TabIndex = 0;
+            // 
+            // radioGroup2
+            // 
+            this.radioGroup2.Location = new System.Drawing.Point(243, 557);
+            this.radioGroup2.Name = "radioGroup2";
+            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
+            this.radioGroup2.Size = new System.Drawing.Size(323, 33);
+            this.radioGroup2.TabIndex = 18;
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(243, 509);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
+            this.radioGroup1.Size = new System.Drawing.Size(326, 33);
+            this.radioGroup1.TabIndex = 17;
             // 
             // textBox4
             // 
@@ -216,6 +236,7 @@ namespace Sernic.Masters
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbProduct.Size = new System.Drawing.Size(323, 26);
             this.CmbProduct.TabIndex = 13;
+            this.CmbProduct.SelectedIndexChanged += new System.EventHandler(this.CmbProduct_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -486,26 +507,6 @@ namespace Sernic.Masters
             this.WEIGHT.Name = "WEIGHT";
             this.WEIGHT.Width = 150;
             // 
-            // radioGroup1
-            // 
-            this.radioGroup1.Location = new System.Drawing.Point(243, 509);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
-            this.radioGroup1.Size = new System.Drawing.Size(326, 33);
-            this.radioGroup1.TabIndex = 17;
-            // 
-            // radioGroup2
-            // 
-            this.radioGroup2.Location = new System.Drawing.Point(243, 557);
-            this.radioGroup2.Name = "radioGroup2";
-            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
-            this.radioGroup2.Size = new System.Drawing.Size(323, 33);
-            this.radioGroup2.TabIndex = 18;
-            // 
             // frmitemmaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -520,6 +521,8 @@ namespace Sernic.Masters
             this.Load += new System.EventHandler(this.frmitemmaster_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbUnit.Properties)).EndInit();
@@ -530,8 +533,6 @@ namespace Sernic.Masters
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

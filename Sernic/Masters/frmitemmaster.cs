@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL.FunactionClass;
+using BLL.PropertyClass;
 
 namespace Sernic.Masters
 {
     public partial class frmitemmaster : Form
     {
         Master Mas = new Master();
+        DataTable DtProduct = new DataTable();
         public frmitemmaster()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace Sernic.Masters
         }
         private void LoadTheme()
         {
-            DataTable DtProduct = new DataTable();
+            
             DtProduct = Mas.GetProduct();
 
             foreach (DataRow item in DtProduct.Rows)
@@ -60,7 +62,14 @@ namespace Sernic.Masters
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            MasterSave mas = new MasterSave();
+           
+            mas.Product_name = CmbProduct.SelectedIndex.ToString();
+        }
 
+        private void CmbProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          //  string str = DtProduct.Select(string())
         }
     }
 }

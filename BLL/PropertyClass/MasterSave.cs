@@ -8,6 +8,6 @@ namespace BLL.PropertyClass
 {
    public class MasterSave
     {
-        public int MyProperty { get; set; }
+        public string Product_name { get; set; }
     }
 }

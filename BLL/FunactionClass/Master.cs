@@ -15,7 +15,7 @@ namespace BLL.FunactionClass
         {
             DataTable DTab = new DataTable();
             string str = string.Empty;
-            str = "Select ProdName from ProdName";
+            str = "Select * from ProdName";
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
