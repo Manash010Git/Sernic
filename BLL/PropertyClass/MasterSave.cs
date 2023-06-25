@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL.PropertyClass
 {
-    class MasterSave
+   public class MasterSave
     {
+        public int MyProperty { get; set; }
     }
 }
