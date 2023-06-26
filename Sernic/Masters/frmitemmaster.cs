@@ -16,6 +16,7 @@ namespace Sernic.Masters
     {
         Master Mas = new Master();
         DataTable DtProduct = new DataTable();
+        string strpro = string.Empty;
         public frmitemmaster()
         {
             InitializeComponent();
@@ -69,7 +70,10 @@ namespace Sernic.Masters
 
         private void CmbProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-          //  string str = DtProduct.Select(string())
+            DataRow[] str = DtProduct.Select("ProdName = " + CmbProduct.Text);
+
+            strpro = str[0].ToString();
         }
+
     }
 }
