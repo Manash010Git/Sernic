@@ -209,6 +209,7 @@ namespace Sernic.Masters
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbSize.Size = new System.Drawing.Size(323, 26);
             this.CmbSize.TabIndex = 14;
+            this.CmbSize.SelectedIndexChanged += new System.EventHandler(this.CmbSize_SelectedIndexChanged);
             // 
             // CmbCategory
             // 
@@ -218,6 +219,7 @@ namespace Sernic.Masters
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbCategory.Size = new System.Drawing.Size(323, 26);
             this.CmbCategory.TabIndex = 14;
+            this.CmbCategory.SelectedIndexChanged += new System.EventHandler(this.CmbCategory_SelectedIndexChanged);
             // 
             // CmbBrand
             // 
@@ -227,6 +229,7 @@ namespace Sernic.Masters
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbBrand.Size = new System.Drawing.Size(323, 26);
             this.CmbBrand.TabIndex = 14;
+            this.CmbBrand.SelectedIndexChanged += new System.EventHandler(this.CmbBrand_SelectedIndexChanged);
             // 
             // CmbProduct
             // 

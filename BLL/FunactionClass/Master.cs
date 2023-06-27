@@ -23,7 +23,7 @@ namespace BLL.FunactionClass
         {
             DataTable DTab = new DataTable();
             string str = string.Empty;
-            str = "Select SizeName from SizeName";
+            str = "Select * from SizeName";
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
@@ -31,7 +31,7 @@ namespace BLL.FunactionClass
         {
             DataTable DTab = new DataTable();
             string str = string.Empty;
-            str = "Select CatName from CatName";
+            str = "Select * from CatName";
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
@@ -39,7 +39,7 @@ namespace BLL.FunactionClass
         {
             DataTable DTab = new DataTable();
             string str = string.Empty;
-            str = "Select BrandName from BrandName";
+            str = "Select * from BrandName";
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
