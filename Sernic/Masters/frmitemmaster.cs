@@ -75,11 +75,15 @@ namespace Sernic.Masters
             mas.category_name = strCatgory;
             mas.Size_name = strSize;
             mas.Brand_name = strBrand;
-            mas.Product_name = strpro;
-            mas.Product_name = strpro;
-            mas.Product_name = strpro;
-            mas.Product_name = strpro;
-            mas.Product_name = strpro;
+            mas.Name = txtName.ToString();
+            mas.Comman_Name = txtCommanName.ToString();
+            mas.Unit = CmbUnit.SelectedItem.ToString();
+            mas.Weights = txtWeights.ToString();
+            mas.Item_Status = CmbIteamStatus.SelectedItem.ToString();
+            mas.Min_Qunantity = txtMinQunantity.ToString();
+            mas.Maintain_Stock = rdMaintainStock.ToString();
+            mas.Finish = CmbFinish.SelectedItem.ToString();
+
         }
 
         private void CmbProduct_SelectedIndexChanged(object sender, EventArgs e)

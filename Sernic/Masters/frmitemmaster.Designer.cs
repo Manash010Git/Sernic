@@ -30,14 +30,14 @@ namespace Sernic.Masters
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.rdMaintainStock = new DevExpress.XtraEditors.RadioGroup();
+            this.RdIteamDisc = new DevExpress.XtraEditors.RadioGroup();
+            this.txtMinQunantity = new System.Windows.Forms.TextBox();
+            this.txtWeights = new System.Windows.Forms.TextBox();
+            this.txtCommanName = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.CmbFinish = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.CmbIteamStatus = new DevExpress.XtraEditors.ComboBoxEdit();
             this.CmbUnit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.CmbSize = new DevExpress.XtraEditors.ComboBoxEdit();
             this.CmbCategory = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -72,10 +72,10 @@ namespace Sernic.Masters
             this.UNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WEIGHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdMaintainStock.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdIteamDisc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFinish.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIteamStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbSize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategory.Properties)).BeginInit();
@@ -88,14 +88,14 @@ namespace Sernic.Masters
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioGroup2);
-            this.panel1.Controls.Add(this.radioGroup1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.comboBoxEdit2);
-            this.panel1.Controls.Add(this.comboBoxEdit1);
+            this.panel1.Controls.Add(this.rdMaintainStock);
+            this.panel1.Controls.Add(this.RdIteamDisc);
+            this.panel1.Controls.Add(this.txtMinQunantity);
+            this.panel1.Controls.Add(this.txtWeights);
+            this.panel1.Controls.Add(this.txtCommanName);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.CmbFinish);
+            this.panel1.Controls.Add(this.CmbIteamStatus);
             this.panel1.Controls.Add(this.CmbUnit);
             this.panel1.Controls.Add(this.CmbSize);
             this.panel1.Controls.Add(this.CmbCategory);
@@ -120,74 +120,74 @@ namespace Sernic.Masters
             this.panel1.Size = new System.Drawing.Size(572, 692);
             this.panel1.TabIndex = 0;
             // 
-            // radioGroup2
+            // rdMaintainStock
             // 
-            this.radioGroup2.Location = new System.Drawing.Point(243, 557);
-            this.radioGroup2.Name = "radioGroup2";
-            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            this.rdMaintainStock.Location = new System.Drawing.Point(243, 557);
+            this.rdMaintainStock.Name = "rdMaintainStock";
+            this.rdMaintainStock.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
-            this.radioGroup2.Size = new System.Drawing.Size(323, 33);
-            this.radioGroup2.TabIndex = 18;
+            this.rdMaintainStock.Size = new System.Drawing.Size(323, 33);
+            this.rdMaintainStock.TabIndex = 18;
             // 
-            // radioGroup1
+            // RdIteamDisc
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(243, 509);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            this.RdIteamDisc.Location = new System.Drawing.Point(243, 509);
+            this.RdIteamDisc.Name = "RdIteamDisc";
+            this.RdIteamDisc.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "YES", true, ((short)(1))),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "NO", true, ((short)(2)))});
-            this.radioGroup1.Size = new System.Drawing.Size(326, 33);
-            this.radioGroup1.TabIndex = 17;
+            this.RdIteamDisc.Size = new System.Drawing.Size(326, 33);
+            this.RdIteamDisc.TabIndex = 17;
             // 
-            // textBox4
+            // txtMinQunantity
             // 
-            this.textBox4.Location = new System.Drawing.Point(243, 461);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(323, 26);
-            this.textBox4.TabIndex = 16;
+            this.txtMinQunantity.Location = new System.Drawing.Point(243, 461);
+            this.txtMinQunantity.Name = "txtMinQunantity";
+            this.txtMinQunantity.Size = new System.Drawing.Size(323, 26);
+            this.txtMinQunantity.TabIndex = 16;
             // 
-            // textBox3
+            // txtWeights
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 365);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(323, 26);
-            this.textBox3.TabIndex = 15;
+            this.txtWeights.Location = new System.Drawing.Point(243, 365);
+            this.txtWeights.Name = "txtWeights";
+            this.txtWeights.Size = new System.Drawing.Size(323, 26);
+            this.txtWeights.TabIndex = 15;
             // 
-            // textBox2
+            // txtCommanName
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 269);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(323, 26);
-            this.textBox2.TabIndex = 15;
+            this.txtCommanName.Location = new System.Drawing.Point(243, 269);
+            this.txtCommanName.Name = "txtCommanName";
+            this.txtCommanName.Size = new System.Drawing.Size(323, 26);
+            this.txtCommanName.TabIndex = 15;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 26);
-            this.textBox1.TabIndex = 15;
+            this.txtName.Location = new System.Drawing.Point(243, 221);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(323, 26);
+            this.txtName.TabIndex = 15;
             // 
-            // comboBoxEdit2
+            // CmbFinish
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(243, 606);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CmbFinish.Location = new System.Drawing.Point(243, 606);
+            this.CmbFinish.Name = "CmbFinish";
+            this.CmbFinish.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(323, 26);
-            this.comboBoxEdit2.TabIndex = 14;
+            this.CmbFinish.Size = new System.Drawing.Size(323, 26);
+            this.CmbFinish.TabIndex = 14;
             // 
-            // comboBoxEdit1
+            // CmbIteamStatus
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(243, 413);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CmbIteamStatus.Location = new System.Drawing.Point(243, 413);
+            this.CmbIteamStatus.Name = "CmbIteamStatus";
+            this.CmbIteamStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.CmbIteamStatus.Properties.Items.AddRange(new object[] {
             "FAST MOOVING",
             "AVILABLE"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(323, 26);
-            this.comboBoxEdit1.TabIndex = 14;
+            this.CmbIteamStatus.Size = new System.Drawing.Size(323, 26);
+            this.CmbIteamStatus.TabIndex = 14;
             // 
             // CmbUnit
             // 
@@ -524,10 +524,10 @@ namespace Sernic.Masters
             this.Load += new System.EventHandler(this.frmitemmaster_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdMaintainStock.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdIteamDisc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFinish.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIteamStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbSize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategory.Properties)).EndInit();
@@ -573,16 +573,16 @@ namespace Sernic.Masters
         private System.Windows.Forms.Button BtnDelete;
         private DevExpress.XtraEditors.ComboBoxEdit CmbProduct;
         private DevExpress.XtraEditors.ComboBoxEdit CmbBrand;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private System.Windows.Forms.TextBox txtWeights;
+        private System.Windows.Forms.TextBox txtCommanName;
+        private System.Windows.Forms.TextBox txtName;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbIteamStatus;
         private DevExpress.XtraEditors.ComboBoxEdit CmbUnit;
         private DevExpress.XtraEditors.ComboBoxEdit CmbSize;
         private DevExpress.XtraEditors.ComboBoxEdit CmbCategory;
-        private System.Windows.Forms.TextBox textBox4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.RadioGroup radioGroup2;
-        private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private System.Windows.Forms.TextBox txtMinQunantity;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbFinish;
+        private DevExpress.XtraEditors.RadioGroup rdMaintainStock;
+        private DevExpress.XtraEditors.RadioGroup RdIteamDisc;
     }
 }
