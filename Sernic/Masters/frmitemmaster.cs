@@ -75,14 +75,15 @@ namespace Sernic.Masters
             mas.category_name = strCatgory;
             mas.Size_name = strSize;
             mas.Brand_name = strBrand;
-            mas.Name = txtName.ToString();
-            mas.Comman_Name = txtCommanName.ToString();
+            mas.Name = txtName.Text;
+            mas.Comman_Name = txtCommanName.Text;
             mas.Unit = CmbUnit.SelectedItem.ToString();
-            mas.Weights = txtWeights.ToString();
-            mas.Item_Status = CmbIteamStatus.SelectedItem.ToString();
-            mas.Min_Qunantity = txtMinQunantity.ToString();
-            mas.Maintain_Stock = rdMaintainStock.ToString();
-            mas.Finish = CmbFinish.SelectedItem.ToString();
+            mas.Weights = Convert.ToDecimal(txtWeights.Text);
+            mas.Item_Status = CmbIteamStatus.Text;
+            mas.Min_Qunantity = txtMinQunantity.Text;
+            mas.Maintain_Stock = rdMaintainStock.Text;
+            mas.Finish = CmbFinish.Text;
+            Mas.saveiteamMaster(mas);
 
         }
 
@@ -95,19 +96,24 @@ namespace Sernic.Masters
         private void CmbBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataRow[] str = DtBrand.Select("BrandName = '" + CmbBrand.Text + "'");
-            strpro = str[0]["BrandCode"].ToString();
+            strBrand = str[0]["BrandCode"].ToString();
         }
 
         private void CmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataRow[] str = DtCatgory.Select("CatName = '" + CmbCategory.Text + "'");
-            strpro = str[0]["CatCode"].ToString();
+            strCatgory = str[0]["CatCode"].ToString();
         }
 
         private void CmbSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataRow[] str = DtSize.Select("SizeName = '" + CmbSize.Text + "'");
-            strpro = str[0]["SizeCode"].ToString();
+            strSize = str[0]["SizeCode"].ToString();
+        }
+
+        private void BtnShow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

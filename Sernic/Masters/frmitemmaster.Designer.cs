@@ -402,6 +402,7 @@ namespace Sernic.Masters
             this.BtnShow.TabIndex = 3;
             this.BtnShow.Text = "Show";
             this.BtnShow.UseVisualStyleBackColor = true;
+            this.BtnShow.Click += new System.EventHandler(this.BtnShow_Click);
             // 
             // BtnEdit
             // 

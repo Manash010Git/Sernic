@@ -47,7 +47,8 @@ namespace BLL.FunactionClass
         public  int saveiteamMaster(MasterSave mas)
         {
             int i = 0;
-            string str = "INSERT INTO [dbo].[ItemName] ([GenCode],[ProdCode],[BrandCode],[CatCode],[SizeCode],[ItemName],[ItemName1],[Idesc],[UniCode],[DivCode],[Reorder],[ItemWt],[Mqty],[Mqty1],[Ordqty],[AOrdqty] ,[COrdqty],[ACOrdqty],[BOrdqty],[ABOrdqty],[Prate],[Srate],[Arate],[Mamt],[Mrp],[Drate],[TaxRate],[Mark],[FilePath],[IRemark],[UseConti],[Mark1],[Temp],[Pqty],[Pqty1],[Pqty2],[Pqty3],[CFQty],[BcCode],[BpCode],[ConCode])VALUES(";
+            string JamaUdhar = "INSERT INTO [dbo].[ItemName] ([ProdCode],[BrandCode],[CatCode],[SizeCode],[ItemName],[ItemName1],[Idesc],[ItemWt])VALUES('" +mas.Product_name + "','" + mas.Brand_name + "','" + mas.category_name + "','" + mas.Size_name + "','" + mas.Name + "','" + mas.Comman_Name + "','" + mas.Item_Status + "','" + mas.Weights + "')";
+            Con.ExecuteQueries(JamaUdhar);
 
             return i;
         }

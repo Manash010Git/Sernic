@@ -15,7 +15,7 @@ namespace BLL.PropertyClass
         public string Name { get; set; }
         public string Comman_Name { get; set; }
         public string Unit { get; set; }
-        public string Weights { get; set; }
+        public decimal Weights { get; set; }
         public string Item_Status { get; set; }
         public string Min_Qunantity { get; set; }
         public string Iteam_Discontinue { get; set; }
