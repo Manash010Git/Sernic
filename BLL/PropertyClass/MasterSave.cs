@@ -44,5 +44,8 @@ namespace BLL.PropertyClass
         public string Bank_name { get; set; }
         public string bank_AccNo { get; set; }
         public string IFSC_NO { get; set; }
+        public string Address { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
     }
 }
