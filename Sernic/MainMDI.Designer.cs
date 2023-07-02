@@ -35,6 +35,17 @@ namespace Sernic
             this.MasterMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripItemmaster = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripCityMaster = new System.Windows.Forms.ToolStripMenuItem();
+            this.batchMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shadeMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sizeMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.brandMAsterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transportMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TransactionMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripPurchase = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSale = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,17 +65,7 @@ namespace Sernic
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.batchMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoryMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shadeMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sizeMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.brandMAsterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transportMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ledgerMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -72,6 +73,7 @@ namespace Sernic
             // 
             // menuStrip
             // 
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MasterMenu,
@@ -80,7 +82,6 @@ namespace Sernic
             this.SettingMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
             this.menuStrip.Size = new System.Drawing.Size(1386, 35);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
@@ -100,7 +101,8 @@ namespace Sernic
             this.grToolStripMenuItem,
             this.transportMasterToolStripMenuItem,
             this.userMasterToolStripMenuItem,
-            this.aToolStripMenuItem});
+            this.aToolStripMenuItem,
+            this.ledgerMasterToolStripMenuItem});
             this.MasterMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.MasterMenu.Name = "MasterMenu";
             this.MasterMenu.Size = new System.Drawing.Size(82, 29);
@@ -119,6 +121,73 @@ namespace Sernic
             this.toolStripCityMaster.Size = new System.Drawing.Size(270, 34);
             this.toolStripCityMaster.Text = "City Master";
             this.toolStripCityMaster.Click += new System.EventHandler(this.toolStripCityMaster_Click);
+            // 
+            // batchMasterToolStripMenuItem
+            // 
+            this.batchMasterToolStripMenuItem.Name = "batchMasterToolStripMenuItem";
+            this.batchMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.batchMasterToolStripMenuItem.Text = "Batch Master";
+            this.batchMasterToolStripMenuItem.Click += new System.EventHandler(this.batchMasterToolStripMenuItem_Click);
+            // 
+            // gToolStripMenuItem
+            // 
+            this.gToolStripMenuItem.Name = "gToolStripMenuItem";
+            this.gToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.gToolStripMenuItem.Text = "Godown Master";
+            // 
+            // categoryMasterToolStripMenuItem
+            // 
+            this.categoryMasterToolStripMenuItem.Name = "categoryMasterToolStripMenuItem";
+            this.categoryMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.categoryMasterToolStripMenuItem.Text = "Category Master";
+            // 
+            // shadeMasterToolStripMenuItem
+            // 
+            this.shadeMasterToolStripMenuItem.Name = "shadeMasterToolStripMenuItem";
+            this.shadeMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.shadeMasterToolStripMenuItem.Text = "Shade Master";
+            // 
+            // sizeMasterToolStripMenuItem
+            // 
+            this.sizeMasterToolStripMenuItem.Name = "sizeMasterToolStripMenuItem";
+            this.sizeMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sizeMasterToolStripMenuItem.Text = "Size Master";
+            // 
+            // brandMAsterToolStripMenuItem
+            // 
+            this.brandMAsterToolStripMenuItem.Name = "brandMAsterToolStripMenuItem";
+            this.brandMAsterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.brandMAsterToolStripMenuItem.Text = "Brand Master";
+            // 
+            // productMasterToolStripMenuItem
+            // 
+            this.productMasterToolStripMenuItem.Name = "productMasterToolStripMenuItem";
+            this.productMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.productMasterToolStripMenuItem.Text = "Product Master";
+            // 
+            // grToolStripMenuItem
+            // 
+            this.grToolStripMenuItem.Name = "grToolStripMenuItem";
+            this.grToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.grToolStripMenuItem.Text = "Grade Master";
+            // 
+            // transportMasterToolStripMenuItem
+            // 
+            this.transportMasterToolStripMenuItem.Name = "transportMasterToolStripMenuItem";
+            this.transportMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.transportMasterToolStripMenuItem.Text = "Transport Master";
+            // 
+            // userMasterToolStripMenuItem
+            // 
+            this.userMasterToolStripMenuItem.Name = "userMasterToolStripMenuItem";
+            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.userMasterToolStripMenuItem.Text = "User Master";
+            // 
+            // aToolStripMenuItem
+            // 
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aToolStripMenuItem.Text = "Area Master";
             // 
             // TransactionMenu
             // 
@@ -275,72 +344,12 @@ namespace Sernic
             this.toolStripStatusLabel.Size = new System.Drawing.Size(60, 25);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // batchMasterToolStripMenuItem
+            // ledgerMasterToolStripMenuItem
             // 
-            this.batchMasterToolStripMenuItem.Name = "batchMasterToolStripMenuItem";
-            this.batchMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.batchMasterToolStripMenuItem.Text = "Batch Master";
-            this.batchMasterToolStripMenuItem.Click += new System.EventHandler(this.batchMasterToolStripMenuItem_Click);
-            // 
-            // gToolStripMenuItem
-            // 
-            this.gToolStripMenuItem.Name = "gToolStripMenuItem";
-            this.gToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.gToolStripMenuItem.Text = "Godown Master";
-            // 
-            // categoryMasterToolStripMenuItem
-            // 
-            this.categoryMasterToolStripMenuItem.Name = "categoryMasterToolStripMenuItem";
-            this.categoryMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.categoryMasterToolStripMenuItem.Text = "Category Master";
-            // 
-            // shadeMasterToolStripMenuItem
-            // 
-            this.shadeMasterToolStripMenuItem.Name = "shadeMasterToolStripMenuItem";
-            this.shadeMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.shadeMasterToolStripMenuItem.Text = "Shade Master";
-            // 
-            // sizeMasterToolStripMenuItem
-            // 
-            this.sizeMasterToolStripMenuItem.Name = "sizeMasterToolStripMenuItem";
-            this.sizeMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.sizeMasterToolStripMenuItem.Text = "Size Master";
-            // 
-            // brandMAsterToolStripMenuItem
-            // 
-            this.brandMAsterToolStripMenuItem.Name = "brandMAsterToolStripMenuItem";
-            this.brandMAsterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.brandMAsterToolStripMenuItem.Text = "Brand Master";
-            // 
-            // productMasterToolStripMenuItem
-            // 
-            this.productMasterToolStripMenuItem.Name = "productMasterToolStripMenuItem";
-            this.productMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.productMasterToolStripMenuItem.Text = "Product Master";
-            // 
-            // grToolStripMenuItem
-            // 
-            this.grToolStripMenuItem.Name = "grToolStripMenuItem";
-            this.grToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.grToolStripMenuItem.Text = "Grade Master";
-            // 
-            // transportMasterToolStripMenuItem
-            // 
-            this.transportMasterToolStripMenuItem.Name = "transportMasterToolStripMenuItem";
-            this.transportMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.transportMasterToolStripMenuItem.Text = "Transport Master";
-            // 
-            // userMasterToolStripMenuItem
-            // 
-            this.userMasterToolStripMenuItem.Name = "userMasterToolStripMenuItem";
-            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.userMasterToolStripMenuItem.Text = "User Master";
-            // 
-            // aToolStripMenuItem
-            // 
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.aToolStripMenuItem.Text = "Area Master";
+            this.ledgerMasterToolStripMenuItem.Name = "ledgerMasterToolStripMenuItem";
+            this.ledgerMasterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ledgerMasterToolStripMenuItem.Text = "Ledger Master";
+            this.ledgerMasterToolStripMenuItem.Click += new System.EventHandler(this.ledgerMasterToolStripMenuItem_Click);
             // 
             // MainMDI
             // 
@@ -406,6 +415,7 @@ namespace Sernic
         private System.Windows.Forms.ToolStripMenuItem transportMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ledgerMasterToolStripMenuItem;
     }
 }
 

@@ -37,5 +37,10 @@ namespace Sernic
             FrmBatchMaster Batch = new FrmBatchMaster();
             Batch.Show();
         }
+
+        private void ledgerMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

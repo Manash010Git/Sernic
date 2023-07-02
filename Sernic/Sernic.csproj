@@ -93,6 +93,12 @@
     <Compile Include="Masters\frmitemmaster.Designer.cs">
       <DependentUpon>frmitemmaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmLedgerMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmLedgerMaster.Designer.cs">
+      <DependentUpon>FrmLedgerMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\FrmSerach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\frmitemmaster.resx">
       <DependentUpon>frmitemmaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmLedgerMaster.resx">
+      <DependentUpon>FrmLedgerMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmSerach.resx">
       <DependentUpon>FrmSerach.cs</DependentUpon>

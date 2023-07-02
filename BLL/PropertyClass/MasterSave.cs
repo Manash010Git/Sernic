@@ -34,4 +34,15 @@ namespace BLL.PropertyClass
         public string Batch_name { get; set; }
         public int Batch_CODE { get; set; }
     }
+    public class LedgerMaster
+    {
+        public int ledger_code { get; set; }
+        public string ledger_name { get; set; }
+        public string Ldeger_Short_name { get; set; }
+        public string group { get; set; }
+        public int is_bank { get; set; }
+        public string Bank_name { get; set; }
+        public string bank_AccNo { get; set; }
+        public string IFSC_NO { get; set; }
+    }
 }
