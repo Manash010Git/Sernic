@@ -31,5 +31,11 @@ namespace Sernic
             FrmCityMaster city = new FrmCityMaster();
             city.Show();
         }
+
+        private void batchMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBatchMaster Batch = new FrmBatchMaster();
+            Batch.Show();
+        }
     }
 }
