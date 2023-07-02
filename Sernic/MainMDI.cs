@@ -28,7 +28,8 @@ namespace Sernic
 
         private void toolStripCityMaster_Click(object sender, EventArgs e)
         {
-
+            FrmCityMaster city = new FrmCityMaster();
+            city.Show();
         }
     }
 }

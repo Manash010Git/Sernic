@@ -82,6 +82,7 @@ namespace Sernic.Masters
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -90,7 +91,7 @@ namespace Sernic.Masters
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(764, 407);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.Enter += new System.EventHandler(this.dataGridView1_Enter);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // FrmSerach
             // 

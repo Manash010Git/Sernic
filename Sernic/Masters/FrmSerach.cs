@@ -32,14 +32,11 @@ namespace Sernic.Masters
             try
             {
                 DataTable dt = new DataTable();
-                dt.Columns.Add("Inv_No");
-                dt.Columns.Add("Inv_Date");
-                dt.Columns.Add("Party_Name");
-                dt.Columns.Add("KG");
-                dt.Columns.Add("Rate");
-                dt.Columns.Add("Amount");
-                DataGridViewRow row = dataGridView1.SelectedRows[0];
-                var DRow1 = row.Cells["Inv_No"].Value.ToString();
+                dt.Columns.Add("CODE");
+                dt.Columns.Add("NAME");
+
+                var row = dataGridView1.CurrentRow.Cells[0].Value.ToString();//dataGridView1.SelectedRows[0];
+                var DRow1 = row[0].ToString();
 
 
                 dt.Rows.Add(DRow1);
@@ -58,9 +55,13 @@ namespace Sernic.Masters
             }
         }
 
-        private void dataGridView1_Enter(object sender, EventArgs e)
+      
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            selectRow();
+            if (e.KeyCode.ToString() == "Return")
+            {
+                selectRow();
+            }
         }
     }
 }
