@@ -23,4 +23,10 @@ namespace BLL.PropertyClass
         public string Finish { get; set; }
 
     }
+    public class CityMaster
+    {
+        public string City_name { get; set; }
+        public string PinCode_name { get; set; }
+        public int CITY_CODE { get; set; }
+    }
 }
