@@ -44,6 +44,14 @@ namespace BLL.FunactionClass
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
+        public DataTable GetCity()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.CITY_CODE AS CODE,A.CITY_NAME,A.PINCODE from CITY_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
         public  int saveiteamMaster(MasterSave mas)
         {
             int i = 0;

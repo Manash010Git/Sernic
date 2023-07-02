@@ -16,6 +16,8 @@ namespace Sernic.Masters
     public partial class FrmCityMaster : Form
     {
         Master Mas = new Master();
+        FrmSerach frserach = new FrmSerach();
+        DataTable Dtcity = new DataTable();
         public FrmCityMaster()
         {
             InitializeComponent();
@@ -65,7 +67,27 @@ namespace Sernic.Masters
 
         private void BtnShow_Click(object sender, EventArgs e)
         {
+            Dtcity = Mas.GetCity();
+            if (Dtcity.Rows.Count > 0)
+            {
+                frserach.DTab1 = Dtcity;
+                frserach.ShowDialog();
+                if (frserach.From2DRow != null)
+                {
+                    txtCityCode.Text = frserach.From2DRow["CODE"].ToString();
+                }
+                DataRow[] str = Dtcity.Select("CODE = '" + txtCityCode.Text + "'");
+                txtcityname.Text = str[0]["CITY_NAME"].ToString();
+                txtPinCode.Text = str[0]["PINCODE"].ToString();
 
+                frserach.Hide();
+                frserach.Dispose();
+                frserach = null;
+            }
+            else
+            {
+                MessageBox.Show("No Data Found..");
+            }
         }
     }
 }
