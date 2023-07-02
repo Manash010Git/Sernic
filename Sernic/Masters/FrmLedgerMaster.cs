@@ -25,7 +25,7 @@ namespace Sernic.Masters
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedText == "Yes")
+            if (comboBox2.Text == "Yes")
             {
                 groupBox1.Visible = true;
             }
@@ -33,7 +33,7 @@ namespace Sernic.Masters
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox5.SelectedText == "Yes")
+            if (comboBox5.Text == "Yes")
             {
                 groupBox2.Visible = true;
             }
@@ -58,22 +58,22 @@ namespace Sernic.Masters
                 mas.bank_AccNo = txtBanckACNo.Text;
                 mas.IFSC_NO = txtIFSCNO.Text;
                 mas.Country_name = txtCountry.Text;
-                if (comboBox2.SelectedText == "Yes")
+                if (comboBox2.Text == "Yes")
                 {
                     mas.is_bank = 1;
                     groupBox1.Visible = true;
                 }
-                else if (comboBox2.SelectedText == "No")
+                else if (comboBox2.Text == "No")
                 {
                     mas.is_bank = 0;
                     groupBox1.Visible = false;
                 }
-                if (comboBox5.SelectedText == "Yes")
+                if (comboBox5.Text == "Yes")
                 {
                     mas.is_gst = 1;
                     groupBox2.Visible = true;
                 }
-                else if (comboBox5.SelectedText == "No")
+                else if (comboBox5.Text == "No")
                 {
                     mas.is_gst = 0;
                     groupBox1.Visible = false;
