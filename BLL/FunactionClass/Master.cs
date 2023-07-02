@@ -52,6 +52,14 @@ namespace BLL.FunactionClass
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
+        public DataTable GetBatch()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.BtCode AS CODE,A.BtName AS NAME from BatchName A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
         public  int saveiteamMaster(MasterSave mas)
         {
             int i = 0;
@@ -74,6 +82,20 @@ namespace BLL.FunactionClass
             string CityMAster = "DELETE FROM CITY_MASTER WHERE  CITY_CODE = ('" + mas.CITY_CODE + "')";
             Con.ExecuteQueries(CityMAster);
 
+            return i;
+        }
+        public int savebatchMaster(BatchMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "INSERT INTO [dbo].[BatchName] ([BtName])VALUES('" + mas.Batch_name + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
+        public int DeleteBatchMaster(BatchMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM BatchMAster WHERE  BtCode = ('" + mas.Batch_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
             return i;
         }
     }

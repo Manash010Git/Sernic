@@ -29,4 +29,9 @@ namespace BLL.PropertyClass
         public string PinCode_name { get; set; }
         public int CITY_CODE { get; set; }
     }
+    public class BatchMaster
+    {
+        public string Batch_name { get; set; }
+        public int Batch_CODE { get; set; }
+    }
 }

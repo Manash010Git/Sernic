@@ -176,6 +176,7 @@ namespace Sernic.Masters
             // 
             // txtCityCode
             // 
+            this.txtCityCode.Enabled = false;
             this.txtCityCode.Location = new System.Drawing.Point(19, 70);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Size = new System.Drawing.Size(651, 26);

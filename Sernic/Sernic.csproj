@@ -75,6 +75,12 @@
     <Compile Include="MainMDI.Designer.cs">
       <DependentUpon>MainMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmBatchMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmBatchMaster.Designer.cs">
+      <DependentUpon>FrmBatchMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\FrmCityMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMDI.resx">
       <DependentUpon>MainMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmBatchMaster.resx">
+      <DependentUpon>FrmBatchMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmCityMaster.resx">
       <DependentUpon>FrmCityMaster.cs</DependentUpon>
