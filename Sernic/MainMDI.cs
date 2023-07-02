@@ -40,7 +40,8 @@ namespace Sernic
 
         private void ledgerMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmLedgerMaster ledger = new FrmLedgerMaster();
+            ledger.Show();
         }
     }
 }

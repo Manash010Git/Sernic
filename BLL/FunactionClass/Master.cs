@@ -60,6 +60,14 @@ namespace BLL.FunactionClass
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
+        public DataTable GetLedgerMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.LEDGER_CODE AS CODE,A.LEDGER_NAME AS NAME,a.LEDGER_SHORT_NAME,a.GROUP_NAME,a.STATE,a.CITY,a.PIN_CODE,a.OFFICE_CONNO,a.OFFICE_ADDRESS,a.EMAIL,a.GST_NO,a.PAN_NO,a.BANK_NAME,a.BANK_NO,a.IFAC_CODE as IFSC_CODE,a.COUNTRY_NAME,a.IS_BANK,a.IS_GST,a.REGISTRATION_TYPE from LEDGER_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
         public  int saveiteamMaster(MasterSave mas)
         {
             int i = 0;
@@ -72,6 +80,22 @@ namespace BLL.FunactionClass
         {
             int i = 0;
             string CityMAster = "INSERT INTO [dbo].[CITY_MASTER] ([CITY_NAME],[PINCODE])VALUES('" + mas.City_name + "','" + mas.PinCode_name + "')";
+            Con.ExecuteQueries(CityMAster);
+
+            return i;
+        }
+        public int saveLedgerMaster(LedgerMaster mas)
+        {
+            int i = 0;
+            string CityMAster = "INSERT INTO [dbo].[LEDGER_MASTER] ([LEDGER_NAME],[LEDGER_SHORT_NAME],[GROUP_NAME],[STATE],[CITY],[PIN_CODE],[OFFICE_CONNO],[OFFICE_ADDRESS],[EMAIL],[GST_NO],[PAN_NO],[BANK_NAME],[BANK_NO],[IFAC_CODE],[COUNTRY_NAME],[IS_BANK],[IS_GST],[REGISTRATION_TYPE])VALUES('" + mas.ledger_name + "','" + mas.Ledger_Short_name + "''" + mas.group + "''" + mas.state + "''" + mas.city + "''" + mas.PINcode + "''" + mas.office_conno + "''" + mas.Address + "''" + mas.Email_id + "''" + mas.GST_no + "''" + mas.PANno + "''" + mas.Bank_name + "''" + mas.bank_AccNo + "''" + mas.IFSC_NO + "''" + mas.Country_name + "''" + mas.is_bank + "''" + mas.is_gst + "''" + mas.Registration + "')";
+            Con.ExecuteQueries(CityMAster);
+
+            return i;
+        }
+        public int DeleteLedgerMaster(LedgerMaster mas)
+        {
+            int i = 0;
+            string CityMAster = "DELETE FROM LEDGER_MASTER WHERE LEDEGER_CODE = ('" + mas.ledger_code + "')";
             Con.ExecuteQueries(CityMAster);
 
             return i;

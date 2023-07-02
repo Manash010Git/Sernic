@@ -38,14 +38,22 @@ namespace BLL.PropertyClass
     {
         public int ledger_code { get; set; }
         public string ledger_name { get; set; }
-        public string Ldeger_Short_name { get; set; }
+        public string Ledger_Short_name { get; set; }
         public string group { get; set; }
         public int is_bank { get; set; }
         public string Bank_name { get; set; }
         public string bank_AccNo { get; set; }
         public string IFSC_NO { get; set; }
+        public string Country_name { get; set; }
         public string Address { get; set; }
         public string city { get; set; }
         public string state { get; set; }
+        public string PINcode { get; set; }
+        public string PANno { get; set; }
+        public string Registration { get; set; }
+        public int is_gst { get; set; }
+        public string GST_no { get; set; }
+        public string office_conno { get; set; }
+        public string Email_id { get; set; }
     }
 }

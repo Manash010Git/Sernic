@@ -80,6 +80,11 @@ namespace Sernic.Masters
             this.txtGSTNo = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtEmailAdress = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtofficeNo = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -128,7 +133,9 @@ namespace Sernic.Masters
             this.panel8.Controls.Add(this.txtPinCode);
             this.panel8.Controls.Add(this.label15);
             this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.txtCountry);
             this.panel8.Controls.Add(this.txtCity);
+            this.panel8.Controls.Add(this.label21);
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.txtstate);
             this.panel8.Controls.Add(this.label12);
@@ -158,14 +165,14 @@ namespace Sernic.Masters
             // 
             // txtPinCode
             // 
-            this.txtPinCode.Location = new System.Drawing.Point(141, 190);
+            this.txtPinCode.Location = new System.Drawing.Point(141, 226);
             this.txtPinCode.Name = "txtPinCode";
             this.txtPinCode.Size = new System.Drawing.Size(319, 26);
             this.txtPinCode.TabIndex = 1;
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(10, 193);
+            this.label14.Location = new System.Drawing.Point(10, 229);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 24);
             this.label14.TabIndex = 0;
@@ -225,6 +232,8 @@ namespace Sernic.Masters
             this.panel7.Controls.Add(this.comboBox1);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.txtofficeNo);
+            this.panel7.Controls.Add(this.label20);
             this.panel7.Controls.Add(this.txtgroupName);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
@@ -241,9 +250,9 @@ namespace Sernic.Masters
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtbankName);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(4, 184);
+            this.groupBox1.Location = new System.Drawing.Point(4, 274);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 250);
+            this.groupBox1.Size = new System.Drawing.Size(450, 160);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bank Detail";
@@ -300,7 +309,7 @@ namespace Sernic.Masters
             this.comboBox3.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox3.Location = new System.Drawing.Point(339, 137);
+            this.comboBox3.Location = new System.Drawing.Point(339, 204);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 28);
             this.comboBox3.TabIndex = 8;
@@ -308,7 +317,7 @@ namespace Sernic.Masters
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 145);
+            this.label6.Location = new System.Drawing.Point(6, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(330, 20);
             this.label6.TabIndex = 6;
@@ -320,7 +329,7 @@ namespace Sernic.Masters
             this.comboBox2.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox2.Location = new System.Drawing.Point(264, 92);
+            this.comboBox2.Location = new System.Drawing.Point(264, 159);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 7;
@@ -332,7 +341,7 @@ namespace Sernic.Masters
             this.comboBox1.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox1.Location = new System.Drawing.Point(264, 54);
+            this.comboBox1.Location = new System.Drawing.Point(264, 121);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 7;
@@ -340,7 +349,7 @@ namespace Sernic.Masters
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 100);
+            this.label5.Location = new System.Drawing.Point(16, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 6;
@@ -349,7 +358,7 @@ namespace Sernic.Masters
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 62);
+            this.label4.Location = new System.Drawing.Point(6, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(213, 20);
             this.label4.TabIndex = 6;
@@ -416,6 +425,7 @@ namespace Sernic.Masters
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.BtnClear);
             this.panel5.Controls.Add(this.BtnShow);
             this.panel5.Controls.Add(this.BtnCancle);
             this.panel5.Controls.Add(this.BtnEdit);
@@ -437,6 +447,7 @@ namespace Sernic.Masters
             this.BtnShow.TabIndex = 10;
             this.BtnShow.Text = "&Show";
             this.BtnShow.UseVisualStyleBackColor = false;
+            this.BtnShow.Click += new System.EventHandler(this.BtnShow_Click);
             // 
             // BtnCancle
             // 
@@ -448,8 +459,9 @@ namespace Sernic.Masters
             this.BtnCancle.Name = "BtnCancle";
             this.BtnCancle.Size = new System.Drawing.Size(113, 46);
             this.BtnCancle.TabIndex = 4;
-            this.BtnCancle.Text = "&Cancle";
+            this.BtnCancle.Text = "&Delete";
             this.BtnCancle.UseVisualStyleBackColor = false;
+            this.BtnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
             // BtnEdit
             // 
@@ -484,7 +496,7 @@ namespace Sernic.Masters
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(10, 226);
+            this.label15.Location = new System.Drawing.Point(10, 262);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(101, 24);
             this.label15.TabIndex = 0;
@@ -492,7 +504,7 @@ namespace Sernic.Masters
             // 
             // txtPANno
             // 
-            this.txtPANno.Location = new System.Drawing.Point(141, 223);
+            this.txtPANno.Location = new System.Drawing.Point(141, 259);
             this.txtPANno.Name = "txtPANno";
             this.txtPANno.Size = new System.Drawing.Size(319, 26);
             this.txtPANno.TabIndex = 1;
@@ -500,7 +512,7 @@ namespace Sernic.Masters
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(10, 258);
+            this.label16.Location = new System.Drawing.Point(10, 294);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(95, 20);
             this.label16.TabIndex = 6;
@@ -515,7 +527,7 @@ namespace Sernic.Masters
             "Consumer",
             "Regular",
             "Unregistred"});
-            this.comboBox4.Location = new System.Drawing.Point(141, 258);
+            this.comboBox4.Location = new System.Drawing.Point(141, 294);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 28);
             this.comboBox4.TabIndex = 8;
@@ -523,7 +535,7 @@ namespace Sernic.Masters
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(10, 292);
+            this.label17.Location = new System.Drawing.Point(10, 328);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(87, 20);
             this.label17.TabIndex = 6;
@@ -535,7 +547,7 @@ namespace Sernic.Masters
             this.comboBox5.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox5.Location = new System.Drawing.Point(141, 292);
+            this.comboBox5.Location = new System.Drawing.Point(141, 328);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 28);
             this.comboBox5.TabIndex = 8;
@@ -545,9 +557,9 @@ namespace Sernic.Masters
             // 
             this.groupBox2.Controls.Add(this.txtGSTNo);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Location = new System.Drawing.Point(3, 326);
+            this.groupBox2.Location = new System.Drawing.Point(3, 361);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(457, 108);
+            this.groupBox2.Size = new System.Drawing.Size(457, 73);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "GST Deatil";
@@ -582,6 +594,51 @@ namespace Sernic.Masters
             this.txtEmailAdress.Name = "txtEmailAdress";
             this.txtEmailAdress.Size = new System.Drawing.Size(319, 26);
             this.txtEmailAdress.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 45);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(75, 20);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Office No";
+            // 
+            // txtofficeNo
+            // 
+            this.txtofficeNo.Location = new System.Drawing.Point(137, 45);
+            this.txtofficeNo.Name = "txtofficeNo";
+            this.txtofficeNo.Size = new System.Drawing.Size(319, 26);
+            this.txtofficeNo.TabIndex = 5;
+            // 
+            // label21
+            // 
+            this.label21.Location = new System.Drawing.Point(10, 194);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(101, 24);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Country";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(141, 191);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(319, 26);
+            this.txtCountry.TabIndex = 1;
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClear.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Location = new System.Drawing.Point(474, 20);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(113, 46);
+            this.BtnClear.TabIndex = 11;
+            this.BtnClear.Text = "&Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // FrmLedgerMaster
             // 
@@ -661,5 +718,10 @@ namespace Sernic.Masters
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtEmailAdress;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtofficeNo;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button BtnClear;
     }
 }
