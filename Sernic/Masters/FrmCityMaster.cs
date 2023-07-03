@@ -35,6 +35,7 @@ namespace Sernic.Masters
                 ins = Mas.saveCityMaster(city);
 
                 MessageBox.Show("Successfull Save");
+                BtnClear_Click(null, null);
             }
             catch (Exception ex)
             {
@@ -56,6 +57,7 @@ namespace Sernic.Masters
                     city.CITY_CODE = Convert.ToInt32(txtCityCode.Text);
                     ins = Mas.DeleteCityMaster(city);
                     MessageBox.Show("Successfull Delete");
+                    BtnClear_Click(null,null);
                 }
                 else
                 {
@@ -97,6 +99,13 @@ namespace Sernic.Masters
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            txtCityCode.Text = string.Empty;
+            txtcityname.Text = string.Empty;
+            txtPinCode.Text = string.Empty;
         }
     }
 }

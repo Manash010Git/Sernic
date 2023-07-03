@@ -71,6 +71,7 @@ namespace Sernic.Masters
             this.COMMONNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WEIGHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rdMaintainStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdIteamDisc.Properties)).BeginInit();
@@ -383,6 +384,7 @@ namespace Sernic.Masters
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnClear);
             this.panel3.Controls.Add(this.BtnShow);
             this.panel3.Controls.Add(this.BtnEdit);
             this.panel3.Controls.Add(this.BtnDelete);
@@ -511,6 +513,20 @@ namespace Sernic.Masters
             this.WEIGHT.Name = "WEIGHT";
             this.WEIGHT.Width = 150;
             // 
+            // BtnClear
+            // 
+            this.BtnClear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClear.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Location = new System.Drawing.Point(497, 39);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(113, 46);
+            this.BtnClear.TabIndex = 13;
+            this.BtnClear.Text = "&Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // frmitemmaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -585,5 +601,6 @@ namespace Sernic.Masters
         private DevExpress.XtraEditors.ComboBoxEdit CmbFinish;
         private DevExpress.XtraEditors.RadioGroup rdMaintainStock;
         private DevExpress.XtraEditors.RadioGroup RdIteamDisc;
+        private System.Windows.Forms.Button BtnClear;
     }
 }

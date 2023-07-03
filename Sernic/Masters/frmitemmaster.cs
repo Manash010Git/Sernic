@@ -84,7 +84,7 @@ namespace Sernic.Masters
             mas.Maintain_Stock = rdMaintainStock.Text;
             mas.Finish = CmbFinish.Text;
             Mas.saveiteamMaster(mas);
-
+            BtnClear_Click(null,null);
         }
 
         private void CmbProduct_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,6 +114,21 @@ namespace Sernic.Masters
         private void BtnShow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            txtCommanName.Text = string.Empty;
+            txtMinQunantity.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtWeights.Text = string.Empty;
+            CmbBrand.Text = string.Empty;
+            CmbCategory.Text = string.Empty;
+            CmbFinish.Text = string.Empty;
+            CmbProduct.Text = string.Empty;
+            CmbSize.Text = string.Empty;
+            CmbUnit.Text = string.Empty;
+           
         }
     }
 }

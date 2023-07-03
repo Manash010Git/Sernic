@@ -30,22 +30,23 @@ namespace Sernic.Masters
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcityname = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPinCode = new System.Windows.Forms.TextBox();
-            this.BtnEdit = new System.Windows.Forms.Button();
-            this.BtnCancle = new System.Windows.Forms.Button();
             this.BtnShow = new System.Windows.Forms.Button();
+            this.BtnCancle = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.txtCityCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPinCode = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtcityname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,38 +61,9 @@ namespace Sernic.Masters
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 38);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 38);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(45, 412);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtCityCode);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.txtPinCode);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.txtcityname);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(45, 38);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(755, 324);
-            this.panel4.TabIndex = 2;
-            // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.BtnClear);
             this.panel5.Controls.Add(this.BtnShow);
             this.panel5.Controls.Add(this.BtnCancle);
             this.panel5.Controls.Add(this.BtnEdit);
@@ -101,35 +73,33 @@ namespace Sernic.Masters
             this.panel5.Size = new System.Drawing.Size(755, 88);
             this.panel5.TabIndex = 3;
             // 
-            // label1
+            // BtnShow
             // 
-            this.label1.Location = new System.Drawing.Point(15, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "City Name";
+            this.BtnShow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnShow.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnShow.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnShow.Location = new System.Drawing.Point(321, 21);
+            this.BtnShow.Name = "BtnShow";
+            this.BtnShow.Size = new System.Drawing.Size(113, 46);
+            this.BtnShow.TabIndex = 10;
+            this.BtnShow.Text = "&Show";
+            this.BtnShow.UseVisualStyleBackColor = false;
+            this.BtnShow.Click += new System.EventHandler(this.BtnShow_Click);
             // 
-            // txtcityname
+            // BtnCancle
             // 
-            this.txtcityname.Location = new System.Drawing.Point(19, 138);
-            this.txtcityname.Name = "txtcityname";
-            this.txtcityname.Size = new System.Drawing.Size(651, 26);
-            this.txtcityname.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(15, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "PinCode";
-            // 
-            // txtPinCode
-            // 
-            this.txtPinCode.Location = new System.Drawing.Point(19, 208);
-            this.txtPinCode.Name = "txtPinCode";
-            this.txtPinCode.Size = new System.Drawing.Size(651, 26);
-            this.txtPinCode.TabIndex = 1;
+            this.BtnCancle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnCancle.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancle.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancle.Location = new System.Drawing.Point(163, 20);
+            this.BtnCancle.Name = "BtnCancle";
+            this.BtnCancle.Size = new System.Drawing.Size(113, 46);
+            this.BtnCancle.TabIndex = 4;
+            this.BtnCancle.Text = "&Delete";
+            this.BtnCancle.UseVisualStyleBackColor = false;
+            this.BtnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
             // BtnEdit
             // 
@@ -146,33 +116,19 @@ namespace Sernic.Masters
             this.BtnEdit.UseVisualStyleBackColor = false;
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
-            // BtnCancle
+            // panel4
             // 
-            this.BtnCancle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnCancle.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancle.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancle.Location = new System.Drawing.Point(163, 20);
-            this.BtnCancle.Name = "BtnCancle";
-            this.BtnCancle.Size = new System.Drawing.Size(113, 46);
-            this.BtnCancle.TabIndex = 4;
-            this.BtnCancle.Text = "&Cancle";
-            this.BtnCancle.UseVisualStyleBackColor = false;
-            this.BtnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
-            // 
-            // BtnShow
-            // 
-            this.BtnShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnShow.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnShow.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnShow.Location = new System.Drawing.Point(321, 21);
-            this.BtnShow.Name = "BtnShow";
-            this.BtnShow.Size = new System.Drawing.Size(113, 46);
-            this.BtnShow.TabIndex = 10;
-            this.BtnShow.Text = "&Show";
-            this.BtnShow.UseVisualStyleBackColor = false;
-            this.BtnShow.Click += new System.EventHandler(this.BtnShow_Click);
+            this.panel4.Controls.Add(this.txtCityCode);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.txtPinCode);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.txtcityname);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(45, 38);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(755, 324);
+            this.panel4.TabIndex = 2;
             // 
             // txtCityCode
             // 
@@ -190,6 +146,66 @@ namespace Sernic.Masters
             this.label3.TabIndex = 2;
             this.label3.Text = "City Code";
             // 
+            // txtPinCode
+            // 
+            this.txtPinCode.Location = new System.Drawing.Point(19, 208);
+            this.txtPinCode.Name = "txtPinCode";
+            this.txtPinCode.Size = new System.Drawing.Size(651, 26);
+            this.txtPinCode.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(15, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "PinCode";
+            // 
+            // txtcityname
+            // 
+            this.txtcityname.Location = new System.Drawing.Point(19, 138);
+            this.txtcityname.Name = "txtcityname";
+            this.txtcityname.Size = new System.Drawing.Size(651, 26);
+            this.txtcityname.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(15, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "City Name";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 38);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(45, 412);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 38);
+            this.panel2.TabIndex = 0;
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClear.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Location = new System.Drawing.Point(484, 20);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(113, 46);
+            this.BtnClear.TabIndex = 13;
+            this.BtnClear.Text = "&Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // FrmCityMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -199,9 +215,9 @@ namespace Sernic.Masters
             this.Name = "FrmCityMaster";
             this.Text = "FrmCityMaster";
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -222,5 +238,6 @@ namespace Sernic.Masters
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.TextBox txtCityCode;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnClear;
     }
 }

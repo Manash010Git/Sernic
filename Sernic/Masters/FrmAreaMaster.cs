@@ -33,6 +33,7 @@ namespace Sernic.Masters
                 ins = Mas.saveAREAMaster(Area);
 
                 MessageBox.Show("Successfull Save");
+                BtnClear_Click(null,null);
             }
             catch (Exception ex)
             {
@@ -52,6 +53,7 @@ namespace Sernic.Masters
                     Area.Area_CODE = Convert.ToInt32(txtAreaCode.Text);
                     ins = Mas.DeleteAreaMaster(Area);
                     MessageBox.Show("Successfull Delete");
+                    BtnClear_Click(null,null);
                 }
                 else
                 {
@@ -92,6 +94,12 @@ namespace Sernic.Masters
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            txtAreaCode.Text = string.Empty;
+            txtAreaName.Text = string.Empty;
         }
     }
 }

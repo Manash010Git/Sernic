@@ -41,6 +41,7 @@ namespace Sernic.Masters
             this.BtnEdit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -103,6 +104,7 @@ namespace Sernic.Masters
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.BtnClear);
             this.panel5.Controls.Add(this.BtnShow);
             this.panel5.Controls.Add(this.BtnCancle);
             this.panel5.Controls.Add(this.BtnEdit);
@@ -136,7 +138,7 @@ namespace Sernic.Masters
             this.BtnCancle.Name = "BtnCancle";
             this.BtnCancle.Size = new System.Drawing.Size(113, 46);
             this.BtnCancle.TabIndex = 4;
-            this.BtnCancle.Text = "&Cancle";
+            this.BtnCancle.Text = "&Delete";
             this.BtnCancle.UseVisualStyleBackColor = false;
             this.BtnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
@@ -171,6 +173,20 @@ namespace Sernic.Masters
             this.panel2.Size = new System.Drawing.Size(800, 38);
             this.panel2.TabIndex = 0;
             // 
+            // BtnClear
+            // 
+            this.BtnClear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClear.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Location = new System.Drawing.Point(500, 20);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(113, 46);
+            this.BtnClear.TabIndex = 12;
+            this.BtnClear.Text = "&Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // FrmBatchMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -201,5 +217,6 @@ namespace Sernic.Masters
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnClear;
     }
 }

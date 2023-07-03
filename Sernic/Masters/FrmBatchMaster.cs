@@ -34,6 +34,7 @@ namespace Sernic.Masters
                 ins = Mas.savebatchMaster(batch);
 
                 MessageBox.Show("Successfull Save");
+                BtnClear_Click(null, null);
             }
             catch (Exception ex)
             {
@@ -53,6 +54,7 @@ namespace Sernic.Masters
                     batch.Batch_CODE = Convert.ToInt32(txtBatchCode.Text);
                     ins = Mas.DeleteBatchMaster(batch);
                     MessageBox.Show("Successfull Delete");
+                    BtnClear_Click(null,null);
                 }
                 else
                 {
@@ -94,6 +96,12 @@ namespace Sernic.Masters
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            txtBatchCode.Text = string.Empty;
+            txtBatchName.Text = string.Empty;
         }
     }
 }
