@@ -61,4 +61,9 @@ namespace BLL.PropertyClass
         public string Size_name { get; set; }
         public int Size_CODE { get; set; }
     }
+    public class AreaMaster
+    {
+        public string Area_name { get; set; }
+        public int Area_CODE { get; set; }
+    }
 }

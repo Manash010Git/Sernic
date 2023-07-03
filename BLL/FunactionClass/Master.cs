@@ -145,5 +145,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetArea()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.AREA_CODE AS CODE,A.AREA_NAME AS NAME from AREA_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveAREAMaster(AreaMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[AREA_MASTER] ([AREA_NAME])VALUES('" + mas.Area_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteAreaMaster(AreaMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM AREA_MASTER WHERE  AREA_CODE = ('" + mas.Area_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
