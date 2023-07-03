@@ -168,5 +168,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetGoDown()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.GODOWN_CODE AS CODE,A.GODOWN_NAME AS NAME from GODOWN_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveGodownMaster(GoDownMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[GODOWN_MASTER] ([GODOWN_NAME])VALUES('" + mas.Godown_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteGodownMaster(GoDownMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM GODOWN_MASTER WHERE  GODOWN_CODE = ('" + mas.Godown_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }

@@ -66,4 +66,9 @@ namespace BLL.PropertyClass
         public string Area_name { get; set; }
         public int Area_CODE { get; set; }
     }
+    public class GoDownMaster
+    {
+        public string Godown_name { get; set; }
+        public int Godown_CODE { get; set; }
+    }
 }
