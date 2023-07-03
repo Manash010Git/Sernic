@@ -214,5 +214,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetGroup()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.GROUP_CODE AS CODE,A.GROUP_NAME AS NAME from GROUP_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveGroupMaster(GroupMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[GROUP_MASTER] ([GroupName])VALUES('" + mas.Group_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteGroupMaster(GroupMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM GROUP_MASTER WHERE  GroupCode = ('" + mas.Group_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }

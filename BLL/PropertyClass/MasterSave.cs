@@ -76,4 +76,9 @@ namespace BLL.PropertyClass
         public string Grade_name { get; set; }
         public int Grade_CODE { get; set; }
     }
+    public class GroupMaster
+    {
+        public string Group_name { get; set; }
+        public int Group_CODE { get; set; }
+    }
 }
