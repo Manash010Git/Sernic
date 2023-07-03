@@ -124,6 +124,7 @@ namespace Sernic.Masters
             this.BtnShow.TabIndex = 10;
             this.BtnShow.Text = "&Show";
             this.BtnShow.UseVisualStyleBackColor = false;
+            this.BtnShow.Click += new System.EventHandler(this.BtnShow_Click);
             // 
             // BtnCancle
             // 
@@ -137,6 +138,7 @@ namespace Sernic.Masters
             this.BtnCancle.TabIndex = 4;
             this.BtnCancle.Text = "&Cancle";
             this.BtnCancle.UseVisualStyleBackColor = false;
+            this.BtnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
             // BtnEdit
             // 

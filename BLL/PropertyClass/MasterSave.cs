@@ -56,4 +56,9 @@ namespace BLL.PropertyClass
         public string office_conno { get; set; }
         public string Email_id { get; set; }
     }
+    public class SizeMaster
+    {
+        public string Size_name { get; set; }
+        public int Size_CODE { get; set; }
+    }
 }

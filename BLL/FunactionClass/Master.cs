@@ -68,6 +68,22 @@ namespace BLL.FunactionClass
             DTab = Con.GetRecordSet(str);
             return DTab;
         }
+        public DataTable GetSizeMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.SizeCode AS CODE,A.SizeName AS NAME from SizeName A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveSizeMaster(SizeMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[SizeName] ([SizeName])VALUES('" + mas.Size_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
         public  int saveiteamMaster(MasterSave mas)
         {
             int i = 0;
@@ -119,6 +135,13 @@ namespace BLL.FunactionClass
         {
             int i = 0;
             string BatchMAster = "DELETE FROM BatchMAster WHERE  BtCode = ('" + mas.Batch_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
+        public int DeleteSizeMaster(SizeMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM SizeName WHERE  SizeCode = ('" + mas.Size_CODE + "')";
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
