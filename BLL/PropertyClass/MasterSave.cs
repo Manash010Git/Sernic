@@ -107,4 +107,10 @@ namespace BLL.PropertyClass
         public int TransType_CODE { get; set; }
         public string TransType { get; set; }
     }
+    public class UserMaster
+    {
+        public string User_name { get; set; }
+        public int Employee_CODE { get; set; }
+        public string Password { get; set; }
+    }
 }

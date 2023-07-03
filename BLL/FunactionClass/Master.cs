@@ -352,5 +352,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetUserMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.Employee_Code AS CODE,A.UserName AS NAME,a.Password  from User_Master A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveUserMaster(UserMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[User_Master] ([UserName] , [Password])VALUES('" + mas.User_name + "','" + mas.Password + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteUserMaster(UserMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM [User_Master] WHERE  Empployee_code = ('" + mas.Employee_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
