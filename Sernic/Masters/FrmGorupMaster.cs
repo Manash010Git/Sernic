@@ -33,6 +33,7 @@ namespace Sernic.Masters
                 ins = Mas.saveGroupMaster(group);
 
                 MessageBox.Show("Successfull Save");
+                BtnClear_Click(null, null);
             }
             catch (Exception ex)
             {
@@ -52,6 +53,7 @@ namespace Sernic.Masters
                     group.Group_CODE = Convert.ToInt32(txtGroupCode.Text);
                     ins = Mas.DeleteGroupMaster(group);
                     MessageBox.Show("Successfull Delete");
+                    BtnClear_Click(null, null);
                 }
                 else
                 {
@@ -98,6 +100,51 @@ namespace Sernic.Masters
         {
             txtGroupCode.Text = string.Empty;
             txtGroupName.Text = string.Empty;
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtGroupCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGroupName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

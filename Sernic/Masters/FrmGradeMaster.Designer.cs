@@ -72,6 +72,7 @@ namespace Sernic.Masters
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(755, 324);
             this.panel4.TabIndex = 2;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // txtGradeCode
             // 
@@ -80,6 +81,7 @@ namespace Sernic.Masters
             this.txtGradeCode.Name = "txtGradeCode";
             this.txtGradeCode.Size = new System.Drawing.Size(651, 26);
             this.txtGradeCode.TabIndex = 3;
+            this.txtGradeCode.TextChanged += new System.EventHandler(this.txtGradeCode_TextChanged);
             // 
             // label3
             // 
@@ -88,6 +90,7 @@ namespace Sernic.Masters
             this.label3.Size = new System.Drawing.Size(101, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Grade Code";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtGradeName
             // 
@@ -95,6 +98,7 @@ namespace Sernic.Masters
             this.txtGradeName.Name = "txtGradeName";
             this.txtGradeName.Size = new System.Drawing.Size(651, 26);
             this.txtGradeName.TabIndex = 1;
+            this.txtGradeName.TextChanged += new System.EventHandler(this.txtGradeName_TextChanged);
             // 
             // label1
             // 
@@ -103,6 +107,7 @@ namespace Sernic.Masters
             this.label1.Size = new System.Drawing.Size(101, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Grade Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -115,6 +120,7 @@ namespace Sernic.Masters
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel5
             // 
@@ -127,6 +133,7 @@ namespace Sernic.Masters
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(755, 88);
             this.panel5.TabIndex = 3;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // BtnShow
             // 
@@ -178,6 +185,7 @@ namespace Sernic.Masters
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(45, 412);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel2
             // 
@@ -186,6 +194,7 @@ namespace Sernic.Masters
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 38);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // FrmGradeMaster
             // 
