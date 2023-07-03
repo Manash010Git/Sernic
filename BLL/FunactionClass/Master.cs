@@ -329,5 +329,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetTransTypeMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.TransTypeCode AS CODE,A.TransType AS NAME,a.TransTypeN  from TransType A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveTransTypeMaster(TransTypeMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[TransType] ([TransType] , [TransTypeN])VALUES('" + mas.TransType_name + "','"+ mas.TransType +"')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteTransTypeMaster(TransTypeMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM [TransTypeN] WHERE  TransTypeCode = ('" + mas.TransType_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }

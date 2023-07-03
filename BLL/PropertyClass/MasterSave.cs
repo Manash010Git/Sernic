@@ -101,4 +101,10 @@ namespace BLL.PropertyClass
         public string Tax_name { get; set; }
         public int Tax_CODE { get; set; }
     }
+    public class TransTypeMaster
+    {
+        public string TransType_name { get; set; }
+        public int TransType_CODE { get; set; }
+        public string TransType { get; set; }
+    }
 }
