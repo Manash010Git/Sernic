@@ -141,6 +141,12 @@
     <Compile Include="Masters\FrmSerach.Designer.cs">
       <DependentUpon>FrmSerach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmShadeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmShadeMaster.Designer.cs">
+      <DependentUpon>FrmShadeMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\FrmsizeMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmSerach.resx">
       <DependentUpon>FrmSerach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmShadeMaster.resx">
+      <DependentUpon>FrmShadeMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmsizeMaster.resx">
       <DependentUpon>FrmsizeMaster.cs</DependentUpon>

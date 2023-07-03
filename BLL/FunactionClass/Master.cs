@@ -283,5 +283,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetShadeMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.SHADE_CODE AS CODE,A.SHADE_NAME AS NAME from SHADE_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveShadeMaster(ShadeMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[SHADE_MASTER] ([SHADE_NAME])VALUES('" + mas.Shade_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteShadeMaster(ShadeMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM SHADE_MASTER WHERE  SHADE_CODE = ('" + mas.Shade_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
