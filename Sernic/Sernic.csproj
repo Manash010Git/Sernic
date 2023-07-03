@@ -93,6 +93,12 @@
     <Compile Include="Masters\FrmCityMaster.Designer.cs">
       <DependentUpon>FrmCityMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmCompanyMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmCompanyMaster.Designer.cs">
+      <DependentUpon>FrmCompanyMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\FrmGoDownMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmCityMaster.resx">
       <DependentUpon>FrmCityMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmCompanyMaster.resx">
+      <DependentUpon>FrmCompanyMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmGoDownMaster.resx">
       <DependentUpon>FrmGoDownMaster.cs</DependentUpon>

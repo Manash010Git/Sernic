@@ -260,5 +260,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetCompanyMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.COMPANY_CODE AS CODE,A.COMPANY_NAME AS NAME from COMPANY_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveCompanyMaster(CompanyMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[COMPANY_MASTER] ([COMPANY_NAME])VALUES('" + mas.Company_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteCompanyMaster(CompanyMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM COMPANY_MASTER WHERE  COMPANY_CODE = ('" + mas.Company_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
