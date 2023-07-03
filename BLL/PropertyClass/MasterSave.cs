@@ -96,4 +96,9 @@ namespace BLL.PropertyClass
         public string Shade_name { get; set; }
         public int Shade_CODE { get; set; }
     }
+    public class TaxMaster
+    {
+        public string Tax_name { get; set; }
+        public int Tax_CODE { get; set; }
+    }
 }

@@ -306,5 +306,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetTaxMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.TAX_CODE AS CODE,A.TAX_NAME AS NAME from TAX_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveTaxMaster(TaxMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[TAX_MASTER] ([TAX_NAME])VALUES('" + mas.Tax_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteTaxMaster(TaxMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM TAX_MASTER WHERE  TAX_CODE = ('" + mas.Tax_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
