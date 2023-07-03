@@ -99,6 +99,12 @@
     <Compile Include="Masters\FrmGoDownMaster.Designer.cs">
       <DependentUpon>FrmGoDownMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmGradeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmGradeMaster.Designer.cs">
+      <DependentUpon>FrmGradeMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\frmitemmaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmGoDownMaster.resx">
       <DependentUpon>FrmGoDownMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmGradeMaster.resx">
+      <DependentUpon>FrmGradeMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\frmitemmaster.resx">
       <DependentUpon>frmitemmaster.cs</DependentUpon>

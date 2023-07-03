@@ -71,4 +71,9 @@ namespace BLL.PropertyClass
         public string Godown_name { get; set; }
         public int Godown_CODE { get; set; }
     }
+    public class GradeMaster
+    {
+        public string Grade_name { get; set; }
+        public int Grade_CODE { get; set; }
+    }
 }

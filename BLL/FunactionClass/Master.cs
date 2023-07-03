@@ -191,5 +191,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetGrade()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.GRADE_CODE AS CODE,A.GRADE_NAME AS NAME from GRADE_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveGradeMaster(GradeMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[GRADE_MASTER] ([GRADE_NAME])VALUES('" + mas.Grade_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteGradeMaster(GradeMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM GRADE_MASTER WHERE  GRADE_CODE = ('" + mas.Grade_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
