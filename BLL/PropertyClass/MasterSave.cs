@@ -81,4 +81,9 @@ namespace BLL.PropertyClass
         public string Group_name { get; set; }
         public int Group_CODE { get; set; }
     }
+    public class ProductMaster
+    {
+        public string Product_name { get; set; }
+        public int Product_CODE { get; set; }
+    }
 }

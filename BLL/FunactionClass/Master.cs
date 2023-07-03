@@ -237,5 +237,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetProductMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.PRODUCT_CODE AS CODE,A.PRODUCT_NAME AS NAME from PRODUCT_MASTER A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveProductMaster(ProductMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[PRODUCT_MASTER] ([PRODUCT_NAME])VALUES('" + mas.Product_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteProductMaster(ProductMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM PRODUCT_MASTER WHERE  ProdCode = ('" + mas.Product_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }
