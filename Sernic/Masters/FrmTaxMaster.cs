@@ -99,6 +99,7 @@ namespace Sernic.Masters
         private void BtnClear_Click(object sender, EventArgs e)
         {
             txtTaxCode.Text = string.Empty;
+
             txtTaxName.Text = string.Empty;
         }
     }
