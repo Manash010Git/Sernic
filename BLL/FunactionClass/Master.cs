@@ -375,5 +375,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetBrandMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.Brand_Code AS CODE,A.Brand_Name AS NAME from Brand_Master A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveBrandMaster(BrandMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[Brand_Master] ([Brand_Name])VALUES('" + mas.Brand_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteBrandMaster(BrandMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM [Brand_Master] WHERE  Brand_Code = ('" + mas.Brand_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }

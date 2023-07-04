@@ -113,4 +113,9 @@ namespace BLL.PropertyClass
         public int Employee_CODE { get; set; }
         public string Password { get; set; }
     }
+    public class BrandMaster
+    {
+        public string Brand_name { get; set; }
+        public int Brand_CODE { get; set; }
+    }
 }

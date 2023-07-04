@@ -87,6 +87,12 @@
     <Compile Include="Masters\FrmBatchMaster.Designer.cs">
       <DependentUpon>FrmBatchMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmBrandMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmBrandMaster.Designer.cs">
+      <DependentUpon>FrmBrandMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\FrmCityMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmBatchMaster.resx">
       <DependentUpon>FrmBatchMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmBrandMaster.resx">
+      <DependentUpon>FrmBrandMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmCityMaster.resx">
       <DependentUpon>FrmCityMaster.cs</DependentUpon>
