@@ -398,5 +398,28 @@ namespace BLL.FunactionClass
             Con.ExecuteQueries(BatchMAster);
             return i;
         }
+        public DataTable GetCategoryMaster()
+        {
+            DataTable DTab = new DataTable();
+            string str = string.Empty;
+            str = "Select A.Category_Code AS CODE,A.Category_Name AS NAME from Category_Master A";
+            DTab = Con.GetRecordSet(str);
+            return DTab;
+        }
+        public int saveCategoryMaster(CategoryMaster mas)
+        {
+            int i = 0;
+            string Iteam = "INSERT INTO [dbo].[Category_Master] ([Category_Name])VALUES('" + mas.Category_name + "')";
+            Con.ExecuteQueries(Iteam);
+
+            return i;
+        }
+        public int DeleteCategoryMaster(CategoryMaster mas)
+        {
+            int i = 0;
+            string BatchMAster = "DELETE FROM [Category_Master] WHERE  Category_Code = ('" + mas.Category_CODE + "')";
+            Con.ExecuteQueries(BatchMAster);
+            return i;
+        }
     }
 }

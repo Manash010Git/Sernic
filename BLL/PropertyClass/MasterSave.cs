@@ -118,4 +118,9 @@ namespace BLL.PropertyClass
         public string Brand_name { get; set; }
         public int Brand_CODE { get; set; }
     }
+    public class CategoryMaster
+    {
+        public string Category_name { get; set; }
+        public int Category_CODE { get; set; }
+    }
 }

@@ -93,6 +93,12 @@
     <Compile Include="Masters\FrmBrandMaster.Designer.cs">
       <DependentUpon>FrmBrandMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masters\FrmCategoryMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\FrmCategoryMaster.Designer.cs">
+      <DependentUpon>FrmCategoryMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masters\FrmCityMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmBrandMaster.resx">
       <DependentUpon>FrmBrandMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\FrmCategoryMaster.resx">
+      <DependentUpon>FrmCategoryMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masters\FrmCityMaster.resx">
       <DependentUpon>FrmCityMaster.cs</DependentUpon>
