@@ -26,7 +26,7 @@ namespace Sernic.Masters
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             try
-            {
+            { 
                 int ins = 0;
                 CityMaster city = new CityMaster();
 

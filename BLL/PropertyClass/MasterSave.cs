@@ -21,7 +21,7 @@ namespace BLL.PropertyClass
         public string Iteam_Discontinue { get; set; }
         public string Maintain_Stock { get; set; }
         public string Finish { get; set; }
-
+        
     }
     public class CityMaster
     {
