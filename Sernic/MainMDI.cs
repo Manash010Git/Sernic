@@ -1,4 +1,5 @@
 ﻿using Sernic.Masters;
+using Sernic.Transactions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,12 @@ namespace Sernic
         {
             FrmLedgerMaster ledger = new FrmLedgerMaster();
             ledger.Show();
+        }
+
+        private void orderMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOrderMaster Order = new FrmOrderMaster();
+            Order.Show();
         }
     }
 }
