@@ -185,6 +185,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\FrmOrderMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrmOrderMaster.Designer.cs">
+      <DependentUpon>FrmOrderMaster.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmComman.resx">
       <DependentUpon>frmComman.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +261,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Transactions\FrmOrderMaster.resx">
+      <DependentUpon>FrmOrderMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -280,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reports\" />
-    <Folder Include="Transactions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
