@@ -1,4 +1,4 @@
-﻿
+﻿using Sernic.Masters;
 using Sernic.Transactions;
 using System;
 using System.Collections.Generic;
@@ -23,24 +23,32 @@ namespace Sernic
 
         private void toolStripItemmaster_Click(object sender, EventArgs e)
         {
-            //frmitemmaster Item = new frmitemmaster();
-            //Item.Show();
+            frmitemmaster Item = new frmitemmaster();
+            Item.Show();
         }
 
         private void toolStripCityMaster_Click(object sender, EventArgs e)
         {
-
+            FrmCityMaster city = new FrmCityMaster();
+            city.Show();
         }
 
-        private void toolStripSale_Click(object sender, EventArgs e)
+        private void batchMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmBatchMaster Batch = new FrmBatchMaster();
+            Batch.Show();
         }
 
-        private void toolStripPurchase_Click(object sender, EventArgs e)
+        private void ledgerMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPurchase purchase_ = new FrmPurchase();
-            purchase_.Show();
+            FrmLedgerMaster ledger = new FrmLedgerMaster();
+            ledger.Show();
+        }
+
+        private void orderMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOrderMaster Order = new FrmOrderMaster();
+            Order.Show();
         }
     }
 }
