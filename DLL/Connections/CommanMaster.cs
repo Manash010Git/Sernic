@@ -10,7 +10,7 @@ namespace DLL.Connections
 {
     public class CommanMaster
     {
-        string ConnectionString = "Data Source=DESKTOP-8GAARUG;Initial Catalog=SIVAM_DATA;Integrated Security=True";
+        string ConnectionString = "Data Source=DESKTOP-8GAARUG;Initial Catalog=Sample;Integrated Security=True";
         SqlConnection con;
 
         public void OpenConection()

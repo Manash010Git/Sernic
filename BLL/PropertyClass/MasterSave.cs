@@ -123,4 +123,34 @@ namespace BLL.PropertyClass
         public string Category_name { get; set; }
         public int Category_CODE { get; set; }
     }
+    public class Order_master
+    {
+        public int Order_no { get; set; }
+        public string Entry_Date { get; set; }
+        public string Entry_Type { get; set; }
+        public string Customer { get; set; }
+        public string State { get; set; }
+        public string City { get; set; }
+        public string Order_type { get; set; }
+        public string Sold_By { get; set; }
+        public string Product { get; set; }
+        public string Brand { get; set; }
+        public string Item { get; set; }
+        public string Bill_no { get; set; }
+        public string Bill_Date{ get; set; }
+        public string Truck_no { get; set; }
+        public string PO_NO { get; set; }
+        public string TransPort { get; set; }
+        public string Tax { get; set; }
+        public string LR_No { get; set; }
+        public string Freight_no { get; set; }
+        public string Size { get; set; }
+        public string Category { get; set; }
+        public string Design { get; set; }
+        public string Batch { get; set; }
+        public string Shade { get; set; }
+        public string Location { get; set; }
+        public string Pcs { get; set; }
+    }
+
 }
