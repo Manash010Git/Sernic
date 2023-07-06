@@ -10,7 +10,7 @@ namespace DLL.Connections
 {
     public class CommanMaster
     {
-        string ConnectionString = "Data Source=DESKTOP-8GAARUG;Initial Catalog=SIVAM_DATA;Integrated Security=True";
+        string ConnectionString = "Data Source=DESKTOP-707N9LI;Initial Catalog=Seranic;Integrated Security=True";
         SqlConnection con;
 
         public void OpenConection()
@@ -56,6 +56,39 @@ namespace DLL.Connections
             CloseConnection();
             return dataum;
 
+        }
+        private DataSet SelectQuery(string query, params IDataParameter[] sqlParams)
+        {
+            try
+            {
+                var con = new SqlConnection(ConnectionString);
+                using (con)
+                {
+                    con.Open();
+                    var cmd = new SqlCommand(query, con);
+                    if (sqlParams != null)
+                    {
+                        foreach (IDataParameter para in sqlParams)
+                        {
+                            cmd.Parameters.Add(para);
+                        }
+                    }
+                    using (var sda = new SqlDataAdapter())
+                    {
+                        sda.SelectCommand = cmd;
+                        using (DataSet ds = new DataSet())
+                        {
+                            sda.Fill(ds);
+                            con.Close();
+                            return ds;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

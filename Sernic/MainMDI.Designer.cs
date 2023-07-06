@@ -108,14 +108,16 @@ namespace Sernic
             // toolStripPurchase
             // 
             this.toolStripPurchase.Name = "toolStripPurchase";
-            this.toolStripPurchase.Size = new System.Drawing.Size(122, 22);
+            this.toolStripPurchase.Size = new System.Drawing.Size(180, 22);
             this.toolStripPurchase.Text = "Purchase";
+            this.toolStripPurchase.Click += new System.EventHandler(this.toolStripPurchase_Click);
             // 
             // toolStripSale
             // 
             this.toolStripSale.Name = "toolStripSale";
-            this.toolStripSale.Size = new System.Drawing.Size(122, 22);
+            this.toolStripSale.Size = new System.Drawing.Size(180, 22);
             this.toolStripSale.Text = "Sale";
+            this.toolStripSale.Click += new System.EventHandler(this.toolStripSale_Click);
             // 
             // ReportMenu
             // 
